@@ -15,7 +15,7 @@ path = "./parser.rs"
 [dependencies]
 anyhow = "1.0"
 object = { version = "0.36.7", optional = true }
-wasmparser = "0.80.0"
+wasmparser = "0.230.0"
 twiggy-ir = { version = "=0.7.0", path = "../ir" }
 twiggy-traits = { version = "=0.7.0", path = "../traits" }
 

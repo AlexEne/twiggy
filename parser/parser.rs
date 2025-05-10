@@ -47,7 +47,7 @@ pub(crate) trait Parse<'a> {
 
     /// Parse `Self` into one or more `ir::Item`s and add them to the builder.
     fn parse_items(
-        &mut self,
+        self,
         items: &mut ir::ItemsBuilder,
         extra: Self::ItemsExtra,
     ) -> anyhow::Result<()>;
@@ -58,7 +58,7 @@ pub(crate) trait Parse<'a> {
     /// Parse edges between items. This is only called *after* we have already
     /// parsed items.
     fn parse_edges(
-        &mut self,
+        self,
         items: &mut ir::ItemsBuilder,
         extra: Self::EdgesExtra,
     ) -> anyhow::Result<()>;
@@ -86,9 +86,9 @@ fn sniff_wasm(extension: Option<&OsStr>, data: &[u8]) -> bool {
 fn parse_wasm(data: &[u8]) -> anyhow::Result<ir::Items> {
     let mut items = ir::ItemsBuilder::new(data.len() as u32);
 
-    let mut module1 = wasm_parse::ModuleReader::new(data);
+    let module1 = wasm_parse::ModuleReader::new(data);
     module1.parse_items(&mut items, ())?;
-    let mut module2 = wasm_parse::ModuleReader::new(data);
+    let module2 = wasm_parse::ModuleReader::new(data);
     module2.parse_edges(&mut items, ())?;
 
     Ok(items.finish())
