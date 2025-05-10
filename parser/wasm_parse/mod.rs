@@ -593,9 +593,7 @@ impl<'a> Parse<'a> for wasmparser::NameSectionReader<'a> {
             };
 
             let name = match subsection {
-                wasmparser::Name::Module { .. } => {
-                    "\"module name\" subsection"
-                }
+                wasmparser::Name::Module { .. } => "\"module name\" subsection",
                 wasmparser::Name::Function(_) => "\"function names\" subsection",
                 wasmparser::Name::Local(_) => "\"local names\" subsection",
                 wasmparser::Name::Unknown { .. } => "\"unknown name\" subsection",
