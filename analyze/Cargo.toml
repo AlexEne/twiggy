@@ -17,7 +17,7 @@ anyhow = "1.0"
 twiggy-ir = { version = "=0.7.0", path = "../ir" }
 twiggy-opt = { version = "=0.7.0", path = "../opt", default-features = false }
 twiggy-traits = { version = "=0.7.0", path = "../traits" }
-csv = "1.2.2"
+csv = "1.3.1"
 regex = "1.4.2"
 serde = "1.0"
 serde_derive = "1.0"
