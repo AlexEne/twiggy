@@ -15,7 +15,7 @@ path = "./traits.rs"
 [dependencies]
 thiserror = "1.0"
 anyhow = "1.0"
-wasmparser = "0.80.0"
+wasmparser = "0.230.0"
 twiggy-ir = { version = "=0.7.0", path = "../ir" }
 csv = "1.2.2"
 regex = "1.4.2"

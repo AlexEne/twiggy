@@ -597,7 +597,7 @@ dependencies = [
  "object",
  "twiggy-ir",
  "twiggy-traits",
- "wasmparser 0.230.0",
+ "wasmparser",
 ]
 
 [[package]]
@@ -609,7 +609,7 @@ dependencies = [
  "regex",
  "thiserror",
  "twiggy-ir",
- "wasmparser 0.80.2",
+ "wasmparser",
 ]
 
 [[package]]
@@ -721,12 +721,6 @@ checksum = "1a05d73b933a847d6cccdda8f838a22ff101ad9bf93e33684f39c1f5f0eece3d"
 dependencies = [
  "unicode-ident",
 ]
-
-[[package]]
-name = "wasmparser"
-version = "0.80.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "449167e2832691a1bff24cde28d2804e90e09586a448c8e76984792c44334a6b"
 
 [[package]]
 name = "wasmparser"
