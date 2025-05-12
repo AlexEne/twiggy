@@ -5,5 +5,5 @@ edition = "2018"
 
 [dependencies]
 rustop = "1.1"
-cargo_toml = "0.13"
+cargo_toml = "0.22"
 anyhow = "1.0"
