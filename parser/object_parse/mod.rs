@@ -69,7 +69,8 @@ pub fn parse(data: &[u8]) -> anyhow::Result<ir::Items> {
         let id = ir::Id::entry(symbol.section_index().unwrap().0, symbol.index().0);
         let name = symbol.name().unwrap();
         let kind: ir::ItemKind = ir::Code::new(name).into();
-        let item = ir::Item::new(id, name, symbol.size() as u32, kind);
+        
+        let item = ir::Item::new(id, name, symbol.size() as u32, 0..1, kind);
         if maybe_thumb_real_addr(&file, symbol.address())
             == maybe_thumb_real_addr(&file, file.entry())
         {

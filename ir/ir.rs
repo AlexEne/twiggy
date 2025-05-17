@@ -9,7 +9,7 @@ use frozen::Frozen;
 use std::cmp;
 use std::collections::btree_map;
 use std::collections::{BTreeMap, BTreeSet};
-use std::ops;
+use std::ops::{self, Range};
 use std::slice;
 use std::u32;
 
@@ -109,7 +109,13 @@ impl ItemsBuilder {
     /// Finish building the IR graph and return the resulting `Items`.
     pub fn finish(mut self) -> Items {
         let meta_root_id = Id::root();
-        let meta_root = Item::new(meta_root_id, "<meta root>", 0, Misc::new());
+        let meta_root = Item::new(
+            meta_root_id,
+            "<meta root>",
+            0,
+            0..(self.size as usize),
+            Misc::new(),
+        );
         self.items.insert(meta_root_id, meta_root);
         self.edges.insert(meta_root_id, self.roots.clone());
 
@@ -438,12 +444,13 @@ pub struct Item {
     id: Id,
     name: String,
     size: u32,
+    bytes_range: Range<usize>,
     kind: ItemKind,
 }
 
 impl Item {
     /// Construct a new `Item` of the given kind.
-    pub fn new<S, K>(id: Id, name: S, size: u32, kind: K) -> Item
+    pub fn new<S, K>(id: Id, name: S, size: u32, bytes_range: Range<usize>, kind: K) -> Item
     where
         S: Into<String>,
         K: Into<ItemKind>,
@@ -453,8 +460,15 @@ impl Item {
             id,
             name,
             size,
+            bytes_range,
             kind: kind.into(),
         }
+    }
+
+    /// Get the range in bytes from the wasm file where this item is stored.
+    #[inline]
+    pub fn bytes_range(&self) -> &Range<usize> {
+        &self.bytes_range
     }
 
     /// Get this item's identifier.
