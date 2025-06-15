@@ -6,7 +6,7 @@ license = "Apache-2.0/MIT"
 name = "twiggy-opt"
 readme = "../README.md"
 repository = "https://github.com/rustwasm/twiggy"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2018"
 
 [lib]
@@ -18,7 +18,7 @@ regex = "1.4.2"
 [dependencies]
 anyhow = "1.0"
 structopt = { version = "0.3", optional = true }
-twiggy-traits = { version = "=0.7.0", path = "../traits" }
+twiggy-traits = { version = "=0.8.0", path = "../traits" }
 wasm-bindgen = { version = "0.2.100", optional = true }
 cfg-if = "1.0.0"
 

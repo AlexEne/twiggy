@@ -6,7 +6,7 @@ license = "Apache-2.0/MIT"
 name = "twiggy-parser"
 readme = "../README.md"
 repository = "https://github.com/rustwasm/twiggy"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2018"
 
 [lib]
@@ -16,8 +16,8 @@ path = "./parser.rs"
 anyhow = "1.0"
 object = { version = "0.36.7", optional = true }
 wasmparser = "0.230.0"
-twiggy-ir = { version = "=0.7.0", path = "../ir" }
-twiggy-traits = { version = "=0.7.0", path = "../traits" }
+twiggy-ir = { version = "=0.8.0", path = "../ir" }
+twiggy-traits = { version = "=0.8.0", path = "../traits" }
 
 [features]
 default = ["dwarf"]

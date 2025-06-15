@@ -6,7 +6,7 @@ license = "Apache-2.0/MIT"
 name = "twiggy"
 readme = "../README.md"
 repository = "https://github.com/rustwasm/twiggy"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2018"
 
 [badges]
@@ -19,11 +19,11 @@ path = "./twiggy.rs"
 [dependencies]
 anyhow = "1.0"
 structopt = "0.3"
-twiggy-analyze = { version = "=0.7.0", path = "../analyze" }
-twiggy-ir = { version = "=0.7.0", path = "../ir" }
-twiggy-opt = { version = "=0.7.0", path = "../opt", features = ["cli"] }
-twiggy-parser = { version = "=0.7.0", path = "../parser" }
-twiggy-traits = { version = "=0.7.0", path = "../traits" }
+twiggy-analyze = { version = "=0.8.0", path = "../analyze" }
+twiggy-ir = { version = "=0.8.0", path = "../ir" }
+twiggy-opt = { version = "=0.8.0", path = "../opt", features = ["cli"] }
+twiggy-parser = { version = "=0.8.0", path = "../parser" }
+twiggy-traits = { version = "=0.8.0", path = "../traits" }
 
 [dev-dependencies]
 colored = "2.0.0"

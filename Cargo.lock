@@ -537,7 +537,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "anyhow",
  "colored",
@@ -552,7 +552,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy-analyze"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "anyhow",
  "csv",
@@ -567,7 +567,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy-ir"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "cpp_demangle",
  "frozen",
@@ -579,7 +579,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy-opt"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "anyhow",
  "cfg-if",
@@ -591,7 +591,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy-parser"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "anyhow",
  "object",
@@ -602,7 +602,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy-traits"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "anyhow",
  "csv",
@@ -614,7 +614,7 @@ dependencies = [
 
 [[package]]
 name = "twiggy-wasm-api"
-version = "0.7.0"
+version = "0.8.0"
 dependencies = [
  "twiggy-analyze",
  "twiggy-ir",

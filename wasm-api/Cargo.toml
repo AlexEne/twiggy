@@ -1,6 +1,6 @@
 [package]
 name = "twiggy-wasm-api"
-version = "0.7.0"
+version = "0.8.0"
 authors = ["Nick Fitzgerald <fitzgen@gmail.com>"]
 license = "Apache-2.0/MIT"
 edition = "2018"
@@ -10,28 +10,28 @@ crate-type = ["cdylib"]
 path = "./wasm-api.rs"
 
 [dependencies.twiggy-ir]
-version = "=0.7.0"
+version = "=0.8.0"
 path = "../ir"
 
 [dependencies.twiggy-analyze]
 default-features = false
-version = "=0.7.0"
+version = "=0.8.0"
 path = "../analyze"
 features = ["emit_json"]
 
 [dependencies.twiggy-opt]
 default-features = false
 features = ["wasm"]
-version = "=0.7.0"
+version = "=0.8.0"
 path = "../opt"
 
 [dependencies.twiggy-parser]
 default-features = false
-version = "=0.7.0"
+version = "=0.8.0"
 path = "../parser"
 
 [dependencies.twiggy-traits]
-version = "=0.7.0"
+version = "=0.8.0"
 path = "../traits"
 
 [dependencies.wasm-bindgen]
