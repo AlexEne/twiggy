@@ -6,7 +6,7 @@ license = "Apache-2.0/MIT"
 name = "twiggy-analyze"
 readme = "../README.md"
 repository = "https://github.com/rustwasm/twiggy"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2018"
 
 [lib]
@@ -14,9 +14,9 @@ path = "./analyze.rs"
 
 [dependencies]
 anyhow = "1.0"
-twiggy-ir = { version = "=0.7.0", path = "../ir" }
-twiggy-opt = { version = "=0.7.0", path = "../opt", default-features = false }
-twiggy-traits = { version = "=0.7.0", path = "../traits" }
+twiggy-ir = { version = "=0.8.0", path = "../ir" }
+twiggy-opt = { version = "=0.8.0", path = "../opt", default-features = false }
+twiggy-traits = { version = "=0.8.0", path = "../traits" }
 csv = "1.2.2"
 regex = "1.4.2"
 serde = "1.0"

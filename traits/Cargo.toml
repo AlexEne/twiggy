@@ -6,7 +6,7 @@ license = "Apache-2.0/MIT"
 name = "twiggy-traits"
 readme = "../README.md"
 repository = "https://github.com/rustwasm/twiggy"
-version = "0.7.0"
+version = "0.8.0"
 edition = "2018"
 
 [lib]
@@ -16,7 +16,7 @@ path = "./traits.rs"
 thiserror = "1.0"
 anyhow = "1.0"
 wasmparser = "0.80.0"
-twiggy-ir = { version = "=0.7.0", path = "../ir" }
+twiggy-ir = { version = "=0.8.0", path = "../ir" }
 csv = "1.2.2"
 regex = "1.4.2"
 
