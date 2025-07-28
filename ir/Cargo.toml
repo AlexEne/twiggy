@@ -16,6 +16,6 @@ path = "./ir.rs"
 cpp_demangle = { version = "0.3.5", default-features = false }
 frozen = "1"
 petgraph = "0.6.2"
-rustc-demangle = "0.1.21"
+rustc-demangle = "0.1.26"
 serde = "1.0"
 serde_derive = "1.0"
